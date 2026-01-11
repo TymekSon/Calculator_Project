@@ -20,7 +20,6 @@ public class Calculator {
     }
     
     public void inputNumber(String number) {
-        // KLUCZOWA POPRAWKA: Jeśli trzeba zacząć nowy numer, wyczyść input
         if (startNewNumber) {
             currentInput = "";
             startNewNumber = false;
@@ -35,7 +34,7 @@ public class Calculator {
             calculate();
         }
         currentOperator = operator;
-        startNewNumber = true;  // Następna liczba będzie nowa
+        startNewNumber = true;
     }
     
     public void calculate() {
@@ -50,7 +49,7 @@ public class Calculator {
         accumulator = truncate(accumulator);
         currentInput = "";
         currentOperator = null;
-        startNewNumber = true;  // Po obliczeniu, następna liczba będzie nowa
+        startNewNumber = true;
     }
     
     public long getCurrentValue() {
@@ -103,7 +102,7 @@ public class Calculator {
     
     public void memoryStore() {
         memory = getCurrentValue();
-        startNewNumber = true;  // POPRAWKA: Po zapisie do pamięci, następna liczba będzie nowa
+        startNewNumber = true;
     }
     
     public void memoryRecall() {
@@ -118,12 +117,12 @@ public class Calculator {
     
     public void memoryAdd() {
         memory = truncate(memory + getCurrentValue());
-        startNewNumber = true;  // POPRAWKA: Po dodaniu do pamięci, następna liczba będzie nowa
+        startNewNumber = true; 
     }
     
     public void memorySubtract() {
         memory = truncate(memory - getCurrentValue());
-        startNewNumber = true;  // POPRAWKA: Po odjęciu od pamięci, następna liczba będzie nowa
+        startNewNumber = true;
     }
     
     public void negate() {
