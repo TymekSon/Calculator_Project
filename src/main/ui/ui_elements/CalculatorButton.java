@@ -1,4 +1,4 @@
-package main;
+package main.ui.ui_elements;
 
 public enum CalculatorButton {
     DIGIT_0("0", ButtonCategory.DIGIT),
@@ -63,15 +63,4 @@ public enum CalculatorButton {
         this.label = label;
         this.category = category;
     }
-}
-enum ButtonCategory{
-    DIGIT,
-    HEX,
-    OPERATOR,
-    BITWISE,
-    MEMORY,
-    FUNCTION,
-    BRACKET,
-    CONTROL,
-    BLANK
 }

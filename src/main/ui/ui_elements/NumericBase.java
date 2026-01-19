@@ -1,6 +1,6 @@
-package main;
+package main.ui.ui_elements;
 
-public enum NumberSystem {
+public enum NumericBase {
     HEX(16, "0123456789ABCDEF"),
     DEC(10, "0123456789"),
     OCT(8, "01234567"),
@@ -9,7 +9,7 @@ public enum NumberSystem {
     private final int base;
     private final String allowedChars;
     
-    NumberSystem(int base, String allowedChars) {
+    NumericBase(int base, String allowedChars) {
         this.base = base;
         this.allowedChars = allowedChars;
     }

@@ -1,25 +1,11 @@
 package main;
 
-import java.util.function.Consumer;
-class Menu {
-    String name;
-    MenuAction[] actions;
-    Menu(String name, MenuAction[] actions){
-        this.name = name;
-        this.actions = actions;
-    }
-}
-class MenuAction {
-    String name;
-    final Consumer<MenuController> action;
-    MenuAction(String name, Consumer<MenuController> action){
-        this.name = name;
-        this.action = action;
-    }
-}
+
+import main.ui.ui_elements.Menu;
+
 public class MenuController {
-    Menu[] menu;
-    MenuController() {
+    public Menu[] menu;
+    public MenuController() {
         menu = new Menu[]{
                 new Menu("View", items_View),
                 new Menu("Edit", items_Edit),

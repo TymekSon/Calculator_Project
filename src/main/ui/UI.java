@@ -1,15 +1,19 @@
-package main;
+package main.ui;
+
+import main.ui.ui_elements.Menu;
+import main.MenuAction;
+import main.MenuController;
+import main.ui.ui_elements.CalcButton;
+import main.ui.ui_elements.CalculatorButton;
+import main.ui.ui_elements.CalculatorPanel;
+import main.ui.ui_elements.GradientPanel;
 
 import javax.swing.*;
 import java.awt.*;
-import javax.swing.border.Border;
 
-import static main.CalculatorButton.*;
+import static main.ui.ui_elements.CalculatorButton.*;
 
-enum Direction{
-    topdown,
-    bottomup
-}
+
 public class UI extends JFrame{
     private static final int windowSizeX_min = 400;
     private static final int windowSizeY_min = 350;
@@ -37,8 +41,8 @@ public class UI extends JFrame{
         bg.add(Box.createRigidArea(new Dimension(10, 0)), BorderLayout.WEST);
         bg.add(Box.createRigidArea(new Dimension(10, 0)), BorderLayout.EAST);
 
-        JPanel outp = new GenericPanel(PanelSize.PanelOut, Direction.topdown);
-        JPanel binp = new GenericPanel(PanelSize.PanelBinary, Direction.topdown);
+        JPanel outp = new CalculatorPanel(PanelSize.PanelOut, Direction.topdown);
+        JPanel binp = new CalculatorPanel(PanelSize.PanelBinary, Direction.topdown);
 
         JPanel content = new JPanel();
         content.setOpaque(false);
@@ -47,7 +51,7 @@ public class UI extends JFrame{
         JPanel mp = new JPanel();
         mp.setPreferredSize(new Dimension((int) (windowSizeX_min*0.9), (int) (windowSizeY_min*0.35)));
         mp.setMaximumSize(new Dimension((int) (windowSizeX_min*0.9), (int) (windowSizeY_min*0.35)));
-        mp.setLayout(new BorderLayout(0, 10));
+        mp.setLayout(new BorderLayout(0, 5));
         mp.setOpaque(false);
         mp.add(outp, BorderLayout.NORTH);
         mp.add(binp, BorderLayout.CENTER);
@@ -65,15 +69,18 @@ public class UI extends JFrame{
         this.setTitle(title);
         this.setVisible(true);
     }
-
-    private static JPanel getRadioContainer() {
+    public enum Direction{
+        topdown,
+        bottomup
+    }
+    private JPanel getRadioContainer() {
         JPanel radioContainer = new JPanel();
         radioContainer.setLayout(new GridLayout(2,1));
         radioContainer.setMinimumSize(new Dimension((int) (windowSizeX_min*0.15), 0));
         radioContainer.setMaximumSize(new Dimension((int) (windowSizeX_min*0.15), 0));
         radioContainer.setOpaque(false);
-        JPanel radio1 = new GenericPanel(PanelSize.PanelRadio, Direction.topdown);
-        JPanel radio2 = new GenericPanel(PanelSize.PanelRadio, Direction.topdown);
+        JPanel radio1 = new CalculatorPanel(PanelSize.PanelRadio, Direction.topdown);
+        JPanel radio2 = new CalculatorPanel(PanelSize.PanelRadio, Direction.topdown);
         radioContainer.add(radio1);
         radioContainer.add(radio2);
         return radioContainer;
@@ -147,94 +154,6 @@ public class UI extends JFrame{
             return new Dimension(this.size_x, this.size_y);
         }
     }
-}
-
-class CalcButton extends JButton {
-    Color color1 = new Color(217, 228, 241);
-    Color color2 = new Color(237, 244, 252);
-
-    CalcButton(Dimension d, CalculatorButton cb) {
-        this.setText(cb.label);
-        this.setBorder(new RoundedBorder(5));
-        this.setMinimumSize(d);
-        this.setMaximumSize(d);
-        setContentAreaFilled(false);
-        setFocusPainted(false);
-    }
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        int w = getWidth();
-        int h = getHeight();
-        Graphics2D g2 = (Graphics2D) g;
-        GradientPaint gp;
-        gp = new GradientPaint(0, h, color2, 0, 0, color1);
-        g2.setPaint(gp);
-        g2.fillRect(0, 0, w, h);
-        super.paintComponent(g);
-    }
-}
-
-class GradientPanel extends JPanel {
-    Color color1 = new Color(217, 228, 241);
-    Color color2 = new Color(237, 244, 252);
-    private final Direction direction;
-    public GradientPanel(Direction direction){
-        this.direction = direction;
-    }
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        int w = getWidth();
-        int h = getHeight();
-        Graphics2D g2 = (Graphics2D) g;
-        GradientPaint gp;
-        if(direction == Direction.topdown){
-            gp = new GradientPaint(0, h, color2, 0, 0, color1);
-        }else{
-            gp = new GradientPaint(0, h, color1, 0, 0, color2);
-        }
-
-        g2.setPaint(gp);
-        g2.fillRect(0, 0, w, h);
-    }
-}
-
-class RoundedBorder implements Border {
-
-    private final int radius;
-
-    public RoundedBorder(int radius) {
-        this.radius = radius;
-    }
-
-    @Override
-    public Insets getBorderInsets(Component c) {
-        return new Insets(6, 6, 6, 6);
-    }
-
-    @Override
-    public boolean isBorderOpaque() {
-        return false;
-    }
-
-    @Override
-    public void paintBorder(
-            Component c, Graphics g, int x, int y, int width, int height) {
-
-        Graphics2D g2 = (Graphics2D) g.create();
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-                RenderingHints.VALUE_ANTIALIAS_ON);
-
-        g2.setColor(Color.DARK_GRAY);
-        g2.drawRoundRect(
-                x + 1, y + 1,
-                width - 3, height - 3,
-                radius, radius
-        );
-        g2.dispose();
-    }
-
 }
 
 

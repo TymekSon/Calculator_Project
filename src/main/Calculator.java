@@ -1,9 +1,11 @@
 package main;
 
+import main.ui.ui_elements.NumericBase;
+
 public class Calculator {
     
     private WordSize wordSize = WordSize.DWORD;
-    private NumberSystem numberSystem = NumberSystem.DEC;
+    private NumericBase numberSystem = NumericBase.DEC;
     private String currentInput = "";
     private long accumulator = 0;
     private String currentOperator = null;
@@ -15,7 +17,7 @@ public class Calculator {
         accumulator = truncate(accumulator);
     }
     
-    public void setNumberSystem(NumberSystem numberSystem) {
+    public void setNumberSystem(NumericBase numberSystem) {
         this.numberSystem = numberSystem;
     }
     
