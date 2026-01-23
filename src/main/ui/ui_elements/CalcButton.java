@@ -4,28 +4,16 @@ import javax.swing.*;
 import java.awt.*;
 
 public class CalcButton extends JButton {
-    Color color1 = new Color(217, 228, 241);
-    Color color2 = new Color(237, 244, 252);
-
     public CalcButton(Dimension d, CalculatorButton cb) {
+        Font currentFont = this.getFont();
+        this.setFont(currentFont.deriveFont(12f));
+        this.setHorizontalTextPosition(SwingConstants.CENTER);
+        this.setVerticalTextPosition(SwingConstants.CENTER);
+        this.setMargin(new Insets(0,0,0,0));
         this.setText(cb.label);
-        this.setBorder(new RoundedBorder(5));
         this.setMinimumSize(d);
+        this.setPreferredSize(d);
         this.setMaximumSize(d);
-        setContentAreaFilled(false);
         setFocusPainted(false);
-    }
-
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        int w = getWidth();
-        int h = getHeight();
-        Graphics2D g2 = (Graphics2D) g;
-        GradientPaint gp;
-        gp = new GradientPaint(0, h, color2, 0, 0, color1);
-        g2.setPaint(gp);
-        g2.fillRect(0, 0, w, h);
-        super.paintComponent(g);
     }
 }

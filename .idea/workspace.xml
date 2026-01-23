@@ -5,28 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14db608b-5db7-4dac-a6b8-06a8246bdde8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/MenuAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/ButtonCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/CalcButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/CalculatorPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/GradientPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/RoundedBorder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/Menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/MenuAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/MenuAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/MenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/NumberSystem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/UI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/CalculatorButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/CalculatorPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/NumberSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/NumericBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/NumberSystemInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/NumberSystemInputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/CalcButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/CalcButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1768815510256</updated>
-      <workItem from="1768815512259" duration="1344000" />
+      <workItem from="1768815512259" duration="3935000" />
     </task>
     <servers />
   </component>
