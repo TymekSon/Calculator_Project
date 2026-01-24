@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14db608b-5db7-4dac-a6b8-06a8246bdde8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/action/ButtonAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/controllers/CalculatorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/controllers/KeyboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/CalcButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/CalcButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +24,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 4
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
   <component name="ProjectId" id="38TFAFaTOIbGqnqTrQPQbPW4ysg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -40,8 +39,6 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/chomi/OneDrive/Pulpit/studies/Calc/Calculator_Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,7 +75,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
       </set>
     </attachedChunks>
   </component>
@@ -89,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1768815510256</updated>
-      <workItem from="1768815512259" duration="1344000" />
+      <workItem from="1768815512259" duration="3935000" />
     </task>
     <servers />
   </component>

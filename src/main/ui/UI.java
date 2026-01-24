@@ -16,7 +16,7 @@ import static main.ui.ui_elements.CalculatorButton.*;
 
 public class UI extends JFrame{
     private static final int windowSizeX_min = 400;
-    private static final int windowSizeY_min = 350;
+    private static final int windowSizeY_min = 380;
     private final String title = "Calculator";
     private final String iconPath = "img/icon.png";
     CalculatorButton[][] buttonLayout = {
@@ -43,6 +43,19 @@ public class UI extends JFrame{
 
         JPanel outp = new CalculatorPanel(PanelSize.PanelOut, Direction.topdown);
         JPanel binp = new CalculatorPanel(PanelSize.PanelBinary, Direction.topdown);
+        outp.setLayout(new BorderLayout());
+        JLabel uplabel = new JLabel();
+        uplabel.setPreferredSize(new Dimension((int)(windowSizeX_min*0.05), (int)(windowSizeY_min*0.9)));
+        outp.add(uplabel, BorderLayout.NORTH);
+        JLabel mainlabel = new JLabel();
+        mainlabel.setText("0");
+        Font font = mainlabel.getFont();
+        mainlabel.setFont(font.deriveFont(20f));
+        mainlabel.setOpaque(true);
+        mainlabel.setBackground(Color.black);
+        mainlabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        mainlabel.setPreferredSize(new Dimension((int)(windowSizeX_min*0.1), (int)(windowSizeY_min*0.9)));
+        outp.add(mainlabel, BorderLayout.CENTER);
 
         JPanel content = new JPanel();
         content.setOpaque(false);
@@ -53,15 +66,21 @@ public class UI extends JFrame{
         mp.setMaximumSize(new Dimension((int) (windowSizeX_min*0.9), (int) (windowSizeY_min*0.35)));
         mp.setLayout(new BorderLayout(0, 5));
         mp.setOpaque(false);
+
         mp.add(outp, BorderLayout.NORTH);
         mp.add(binp, BorderLayout.CENTER);
+
         content.add(mp, BorderLayout.NORTH);
+
         JPanel btp = new JPanel();
         btp.setOpaque(false);
         btp.setLayout(new BorderLayout());
+
         JPanel radioContainer = getRadioContainer();
+
         btp.add(radioContainer, BorderLayout.WEST);
         btp.add(getButtonContainer(), BorderLayout.CENTER);
+
         content.add(btp, BorderLayout.CENTER);
         bg.add(content, BorderLayout.CENTER);
         this.setResizable(false);
@@ -95,7 +114,7 @@ public class UI extends JFrame{
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weightx = 0;
         gbc.weighty = 0;
-        gbc.insets = new Insets(1, 1, 1, 1);
+        gbc.insets = new Insets(2, 1, 1, 1);
         for(int i = 0; i < 8; i++){
             gbc.gridx = i;
             for(int j = 0; j < 6; j++){
