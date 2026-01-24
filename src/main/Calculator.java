@@ -1,24 +1,29 @@
 package main;
 
-import main.ui.ui_elements.NumericBase;
-
 public class Calculator {
-    
-    private WordSize wordSize = WordSize.DWORD;
-    private NumericBase numberSystem = NumericBase.DEC;
-    private String currentInput = "";
-    private long accumulator = 0;
-    private String currentOperator = null;
-    private long memory = 0;
-    private boolean startNewNumber = false;
-    
+    private WordSize wordSize;
+    private NumericBase base;
+    private String currentInput;
+    private long accumulator;
+    private String currentOperator;
+    private long memory;
+    private boolean startNewNumber;
+    public Calculator(WordSize ws, NumericBase nb){
+        wordSize = ws;
+        base = nb;
+        currentInput = "";
+        accumulator = 0;
+        currentOperator = null;
+        memory = 0;
+        startNewNumber = false;
+    }
     public void setWordSize(WordSize wordSize) {
         this.wordSize = wordSize;
         accumulator = truncate(accumulator);
     }
     
-    public void setNumberSystem(NumericBase numberSystem) {
-        this.numberSystem = numberSystem;
+    public void setBase(NumericBase base) {
+        this.base = base;
     }
     
     public void inputNumber(String number) {
@@ -27,7 +32,7 @@ public class Calculator {
             startNewNumber = false;
         }
         
-        String filtered = numberSystem.filterInput(number);
+        String filtered = base.filterInput(number);
         currentInput += filtered;
     }
     
@@ -68,7 +73,7 @@ public class Calculator {
     public String getDisplayValue() {
         long value = getCurrentValue();
         
-        switch (numberSystem) {
+        switch (base) {
             case HEX:
                 return NumberConverter.toHex(value, wordSize.getBits());
             case BIN:
@@ -143,7 +148,7 @@ public class Calculator {
         }
         
         try {
-            switch (numberSystem) {
+            switch (base) {
                 case HEX:
                     return NumberConverter.fromHex(currentInput);
                 case BIN:

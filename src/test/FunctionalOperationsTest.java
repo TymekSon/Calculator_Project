@@ -1,5 +1,6 @@
 package test;
 
+import main.NumericBase;
 import main.WordSize;
 import main.Calculator;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +13,7 @@ class FunctionalOperationsTest {
     
     @BeforeEach
     void setUp() {
-        calculator = new Calculator();
+        calculator = new Calculator(WordSize.QWORD, NumericBase.DEC);
     }
        
     @Test

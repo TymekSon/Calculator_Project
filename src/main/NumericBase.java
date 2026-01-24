@@ -1,4 +1,4 @@
-package main.ui.ui_elements;
+package main;
 
 public enum NumericBase {
     HEX(16, "0123456789ABCDEF"),
