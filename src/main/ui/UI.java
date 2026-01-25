@@ -23,7 +23,7 @@ public class UI extends JFrame{
     private final String[] radioBases = {"Hex", "Dec", "Oct", "Bin"};
     private final String[] radioWordSizes = {"Qword", "Dword", "Word", "Byte"};
     private OutputPanel outputPanel;
-    private JPanel binaryPanel;
+    private BinaryPanel binaryPanel;
     private RadioPanel basePanel;
     private RadioPanel wordSizePanel;
     private ButtonPanel buttonContainer;
@@ -97,6 +97,9 @@ public class UI extends JFrame{
     }
     public ButtonPanel getButtonContainer(){
         return buttonContainer;
+    }
+    public BinaryPanel getBinaryPanel() {
+        return binaryPanel;
     }
     public enum Direction{
         topdown,

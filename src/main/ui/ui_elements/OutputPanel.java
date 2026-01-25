@@ -25,4 +25,13 @@ public class OutputPanel extends CalculatorPanel{
     public void display(String value){
         mainLabel.setText(value);
     }
+
+    public void setMainDisplay(String value) {
+        mainLabel.setText(value);  // Lub wywołaj display(value)
+    }
+
+    // Opcjonalnie: Jeśli upperLabel ma być używany
+    public void setUpperDisplay(String value) {
+        upperLabel.setText(value);
+    }
 }
