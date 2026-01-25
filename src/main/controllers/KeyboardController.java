@@ -39,9 +39,9 @@ public class KeyboardController {
 
                 // bit operators
                 new ButtonAction("AND", () -> controller.inputOperator("AND")),
-                new ButtonAction("OR", () -> controller.inputOperator("AND")),
-                new ButtonAction("XOR", () -> controller.inputOperator("AND")),
-                new ButtonAction("NOT", () -> controller.inputOperator("AND")),
+                new ButtonAction("OR", () -> controller.inputOperator("OR")),
+                new ButtonAction("XOR", () -> controller.inputOperator("XOR")),
+                new ButtonAction("NOT", () -> controller.inputOperator("NOT")),
 
                 // bit shifts
                 new ButtonAction(">>", () -> controller.inputOperator(">>")),
@@ -49,10 +49,10 @@ public class KeyboardController {
 
                 // memory
                 new ButtonAction("MR", () -> controller.memoryRecall()),
-                new ButtonAction("M+", () -> controller.memoryRecall()),
-                new ButtonAction("M-", () -> controller.memoryRecall()),
-                new ButtonAction("MC", () -> controller.memoryRecall()),
-                new ButtonAction("MS", () -> controller.memoryRecall())
+                new ButtonAction("M+", () -> controller.memoryAdd()),
+                new ButtonAction("M-", () -> controller.memorySubtract()),
+                new ButtonAction("MC", () -> controller.memoryClear()),
+                new ButtonAction("MS", () -> controller.memoryStore())
         );
     }
 }
