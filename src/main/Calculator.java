@@ -3,9 +3,9 @@ package main;
 public class Calculator {
     private WordSize wordSize;
     private NumericBase base;
-    private String currentInput;
+    private String currentInput = "";
     private long accumulator;
-    private String currentOperator;
+    private String currentOperator = "";
     private long memory;
     private boolean startNewNumber;
 

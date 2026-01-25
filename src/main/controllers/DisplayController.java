@@ -20,19 +20,19 @@ public class DisplayController {
 
         // Aktualizuj wyświetlacz binarny
         String binaryValue = calc.getBinaryRepresentation();
-        ui.getOutputPanel().setBinaryDisplay(binaryValue);
-        // lub jeśli binary panel jest osobny:
-        // ui.getBinaryPanel().setDisplay(binaryValue);
+        ui.getOutputPanel().setUpperDisplay(binaryValue);
     }
 
     public void showError(String message) {
         UI ui = controller.getUI();
         ui.getOutputPanel().setMainDisplay(message);
+        // Czyszczenie binary przy błędzie (opcjonalnie, aby uniknąć starej wartości)
+        ui.getBinaryPanel().clear();
     }
 
     public void clearDisplay() {
         UI ui = controller.getUI();
         ui.getOutputPanel().setMainDisplay("0");
-        ui.getOutputPanel().setBinaryDisplay("0");
+        ui.getBinaryPanel().clear();  // Użyj nowej metody clear
     }
 }

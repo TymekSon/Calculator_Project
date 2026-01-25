@@ -30,4 +30,24 @@ public class BinaryPanel extends GradientPanel {
             this.quartets[i] = quartet;
         }
     }
+
+    void setBinaryDisplay(String binaryString){
+        int requiredLength = 64;
+        if (binaryString.length() > requiredLength) {
+            binaryString = binaryString.substring(binaryString.length() - requiredLength);  // Przytnij jeśli dłuższy
+        } else {
+            binaryString = String.format("%" + requiredLength + "s", binaryString).replace(' ', '0');  // Uzupełnij zerami
+        }
+
+        for (int i = 0; i < 16; i++) {
+            int start = i * 4;
+            String bits = binaryString.substring(start, start + 4);
+            quartets[i].update(bits);
+        }
+    }
+    public void clear() {
+        for (BinaryQuartet quartet : quartets) {
+            quartet.update("0000");  // Lub quartet.setValue(0);
+        }
+    }
 }
