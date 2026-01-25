@@ -1,6 +1,8 @@
 package test;
 
 import main.Calculator;
+import main.NumericBase;
+import main.WordSize;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,7 +12,7 @@ public class MemoryOperationsTest {
     
     @BeforeEach
     void setUp() {
-        calculator = new Calculator();
+        calculator = new Calculator(WordSize.QWORD, NumericBase.DEC);
     }
     
     @Test

@@ -51,7 +51,7 @@ public enum CalculatorButton {
 
     CTRL_CLEAR_ENTRY("CE", ButtonCategory.CONTROL),
     CTRL_CLEAR("C", ButtonCategory.CONTROL),
-    CTRL_BACKSPACE("<-", ButtonCategory.CONTROL),
+    CTRL_BACKSPACE("←", ButtonCategory.CONTROL),
     CTRL_EQUALS("=", ButtonCategory.CONTROL),
 
     BLANK("", ButtonCategory.BLANK);
