@@ -8,14 +8,10 @@ public class Calculator {
     private String currentOperator;
     private long memory;
     private boolean startNewNumber;
-    public Calculator(WordSize ws, NumericBase nb){
-        wordSize = ws;
-        base = nb;
-        currentInput = "";
-        accumulator = 0;
-        currentOperator = null;
-        memory = 0;
-        startNewNumber = false;
+
+    public Calculator(WordSize wordSize, NumericBase numberSystem) {
+        this.wordSize = wordSize;
+        this.base = numberSystem;
     }
     public void setWordSize(WordSize wordSize) {
         this.wordSize = wordSize;

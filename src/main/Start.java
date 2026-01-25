@@ -1,5 +1,6 @@
 package main;
 
+import main.controllers.Controller;
 import main.ui.UI;
 
 public class Start {

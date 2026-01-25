@@ -1,0 +1,38 @@
+package main.controllers;
+
+import main.Calculator;
+import main.ui.UI;
+
+public class DisplayController {
+    private final Controller controller;
+
+    public DisplayController(Controller controller) {
+        this.controller = controller;
+    }
+
+    public void updateDisplay() {
+        Calculator calc = controller.getCalculator();
+        UI ui = controller.getUI();
+
+        // Aktualizuj główny wyświetlacz
+        String displayValue = calc.getDisplayValue();
+        ui.getOutputPanel().setMainDisplay(displayValue);
+
+        // Aktualizuj wyświetlacz binarny
+        String binaryValue = calc.getBinaryRepresentation();
+        ui.getOutputPanel().setBinaryDisplay(binaryValue);
+        // lub jeśli binary panel jest osobny:
+        // ui.getBinaryPanel().setDisplay(binaryValue);
+    }
+
+    public void showError(String message) {
+        UI ui = controller.getUI();
+        ui.getOutputPanel().setMainDisplay(message);
+    }
+
+    public void clearDisplay() {
+        UI ui = controller.getUI();
+        ui.getOutputPanel().setMainDisplay("0");
+        ui.getOutputPanel().setBinaryDisplay("0");
+    }
+}

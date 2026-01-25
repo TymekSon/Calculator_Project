@@ -5,31 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14db608b-5db7-4dac-a6b8-06a8246bdde8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/DisplayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/InputController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/RadioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/BinaryQuartet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/ButtonPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/MenuBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/OutputPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/RadioPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controllers/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controllers/DisplayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controllers/InputController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/Start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/module-info.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/DisplayController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/InputController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/RadioController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/CalcButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/CalcButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/CalculatorButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/NumericBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/NumericBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ArithmeticOperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ArithmeticOperationsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/BitOperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/BitOperationsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/FunctionalOperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/FunctionalOperationsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MemoryOperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MemoryOperationsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/NumberSystemInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/NumberSystemInputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/CalculatorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/KeyboardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/RadioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/RadioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/UIController.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +72,7 @@
       <module name="programmer_calculator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="main.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
