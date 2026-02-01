@@ -98,8 +98,12 @@ public class Controller {
         ));
     }
     public void addOperator(CalculatorButton cb){
+        System.out.println("Button label: '" + cb.label + "'");
+        System.out.println("Button type: " + cb.category); // jeśli masz taką metodę
+        System.out.println("addOperator: buffer = " + buffer);
         calc.inputNumber(buffer);
         calc.inputOperator(cb.label);
+
         operator = cb;
         moveBuffer();
     }

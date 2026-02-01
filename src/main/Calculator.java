@@ -167,6 +167,13 @@ public class Calculator {
     }
     
     private long performOperation(long left, long right, String operator) {
+        System.out.println("performOperation: left=" + left + ", right=" + right + ", operator='" + operator + "'");
+        System.out.println("Operator char codes: " + operator.chars().boxed().toList());
+
+        operator = operator.replace("−", "-")      // Unicode minus → ASCII minus
+                .replace("×", "*")      // Unicode multiplication → ASCII
+                .replace("÷", "/");
+
         switch (operator) {
             case "+":
                 return left + right;
@@ -184,23 +191,24 @@ public class Calculator {
                     throw new ArithmeticException("Division by zero");
                 }
                 return left % right;
-            case "AND":
+            case "And":
                 return left & right;
-            case "OR":
+            case "Or":
                 return left | right;
-            case "XOR":
+            case "Xor":
                 return left ^ right;
-            case "NOT":
+            case "Not":
                 return ~left;
-            case "<<":
+            case "Lsh":
                 return left << right;
-            case ">>":
+            case "Rsh":
                 return left >> right;
-            case "ROL":
+            case "RoL":
                 return rotateLeft(left, (int) right);
-            case "ROR":
+            case "RoR":
                 return rotateRight(left, (int) right);
             default:
+                System.out.println("performOperation: DEFAULT case hit!");
                 return right;
         }
     }
