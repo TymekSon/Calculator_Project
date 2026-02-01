@@ -1,9 +1,11 @@
 package main.ui.ui_elements;
 
+import main.controllers.InputController;
 import main.ui.UI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class RadioPanel extends CalculatorPanel {
     private final ButtonGroup group = new ButtonGroup();
@@ -19,7 +21,6 @@ public class RadioPanel extends CalculatorPanel {
             rb.setOpaque(false);
             rb.setFocusPainted(false);
             rb.setFont(UI.regularFont.deriveFont(9f));
-
             if (text.equals(defaultSelected)) {
                 rb.setSelected(true);
             }

@@ -1,6 +1,6 @@
 package main.ui.ui_elements;
 
-enum ButtonCategory {
+public enum ButtonCategory {
     DIGIT,
     HEX,
     OPERATOR,

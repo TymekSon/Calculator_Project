@@ -14,7 +14,6 @@ public class OutputPanel extends CalculatorPanel{
         upperLabel = new JLabel();
         upperLabel.setPreferredSize(UI.PanelSize.OutputLabel.dim());
         mainLabel = new JLabel();
-        mainLabel.setText("0");
         mainLabel.setFont(UI.semiboldFont.deriveFont(20f));
         mainLabel.setOpaque(false);
         mainLabel.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -22,15 +21,11 @@ public class OutputPanel extends CalculatorPanel{
         this.add(upperLabel, BorderLayout.NORTH);
         this.add(mainLabel, BorderLayout.CENTER);
     }
-    public void display(String value){
+
+    public void setMainDisplay(String value) {
         mainLabel.setText(value);
     }
 
-    public void setMainDisplay(String value) {
-        mainLabel.setText(value);  // Lub wywołaj display(value)
-    }
-
-    // Opcjonalnie: Jeśli upperLabel ma być używany
     public void setUpperDisplay(String value) {
         upperLabel.setText(value);
     }

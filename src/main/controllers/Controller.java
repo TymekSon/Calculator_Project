@@ -4,6 +4,9 @@ import main.Calculator;
 import main.NumericBase;
 import main.WordSize;
 import main.ui.UI;
+import main.ui.ui_elements.CalculatorButton;
+
+import java.util.Objects;
 
 public class Controller {
     NumericBase base;
@@ -14,7 +17,8 @@ public class Controller {
     RadioController rc;
     Calculator calc;
     public String buffer;
-
+    public String upperBuffer;
+    private CalculatorButton operator;
     public Controller(UI ui){
         this.base = NumericBase.DEC;
         this.wordSize = WordSize.QWORD;
@@ -25,14 +29,14 @@ public class Controller {
         this.dc = new DisplayController(this);
         this.ic = new InputController(this);
         this.rc = new RadioController(this);
+        this.upperBuffer = "";
+        this.buffer = "0";
+        this.operator = null;
 
-        this.buffer = "";
-
-        // Pierwsza aktualizacja wyświetlacza
-        dc.updateDisplay();
+        dc.updateDisplay(buffer);
+        ui.getButtonContainer().updateButtons(base);
     }
 
-    // Metody dostępowe dla podkontrolerów
     public Calculator getCalculator() {
         return calc;
     }
@@ -52,6 +56,7 @@ public class Controller {
     public void setBase(NumericBase base) {
         this.base = base;
         calc.setBase(base);
+        ui.getButtonContainer().updateButtons(base);
     }
 
     public WordSize getWordSize() {
@@ -61,5 +66,33 @@ public class Controller {
     public void setWordSize(WordSize wordSize) {
         this.wordSize = wordSize;
         calc.setWordSize(wordSize);
+    }
+
+    public void addToBuffer(String s){
+        if (Objects.equals(buffer, "0"))
+            buffer = "";
+        buffer += s;
+        dc.updateDisplay(buffer);
+    }
+    public void addOperator(CalculatorButton cb){
+        operator = cb;
+        moveBuffer();
+    }
+    public void moveBuffer(){
+        upperBuffer = buffer;
+        buffer = "0";
+    }
+    public void executeFunction(String s){
+
+    }
+    public void clearBuffer(){
+        buffer = "0";
+        upperBuffer = "";
+    }
+    public void memoryAction(String s){
+
+    }
+    public void evaluate(){
+        calc.evaluate();
     }
 }
