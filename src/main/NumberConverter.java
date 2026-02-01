@@ -11,7 +11,7 @@ public class NumberConverter {
     public static String toBinary(long value, int bitSize) {
         value = truncateToWordSize(value, bitSize);
         String binary = Long.toBinaryString(value);
-        return padLeft(binary, bitSize, '0');
+        return binary;
     }
     
     public static String toOctal(long value, int bitSize) {
