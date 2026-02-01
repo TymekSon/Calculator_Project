@@ -1,8 +1,6 @@
 package main.controllers;
 
-import main.Calculator;
-import main.NumericBase;
-import main.WordSize;
+import main.*;
 import main.ui.UI;
 import main.ui.ui_elements.CalculatorButton;
 
@@ -53,10 +51,28 @@ public class Controller {
         return base;
     }
 
+    public String getBuffer(){
+        return buffer;
+    }
+
     public void setBase(NumericBase base) {
+        NumericBase oldBase = this.base;
         this.base = base;
         calc.setBase(base);
         ui.getButtonContainer().updateButtons(base);
+        buffer = StringNumberConverter.convert(
+                buffer,
+                oldBase,
+                base,
+                wordSize.getBits()
+        );
+        dc.updateDisplay(buffer);
+        dc.updateBinary(StringNumberConverter.convert(
+                buffer,
+                base,
+                NumericBase.BIN,
+                wordSize.getBits()
+        ));
     }
 
     public WordSize getWordSize() {
@@ -69,10 +85,17 @@ public class Controller {
     }
 
     public void addToBuffer(String s){
-        if (Objects.equals(buffer, "0"))
+        String filtered = base.filterInput(s);
+        if (buffer.equals("0"))
             buffer = "";
-        buffer += s;
+        buffer += filtered;
         dc.updateDisplay(buffer);
+        dc.updateBinary(StringNumberConverter.convert(
+                buffer,
+                base,
+                NumericBase.BIN,
+                wordSize.getBits()
+        ));
     }
     public void addOperator(CalculatorButton cb){
         operator = cb;
@@ -88,11 +111,28 @@ public class Controller {
     public void clearBuffer(){
         buffer = "0";
         upperBuffer = "";
+        dc.updateDisplay(buffer);
+        dc.updateBinary(StringNumberConverter.convert(
+                buffer,
+                base,
+                NumericBase.BIN,
+                wordSize.getBits()
+        ));
     }
     public void memoryAction(String s){
 
     }
     public void evaluate(){
         calc.evaluate();
+    }
+
+    public void backspace() {
+        if (buffer != null && !buffer.isEmpty() && !buffer.equals("0")) {
+            buffer = buffer.substring(0, buffer.length() - 1);
+        }
+    }
+    public void pasteToBuffer(String s){
+        buffer = base.filterInput(s);
+        dc.updateDisplay(buffer);
     }
 }
