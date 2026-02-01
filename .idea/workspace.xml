@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="14db608b-5db7-4dac-a6b8-06a8246bdde8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controllers/DisplayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/DisplayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/controllers/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/controllers/RadioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/RadioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/ButtonCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/ButtonCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/ButtonPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/ButtonPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/CalculatorButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/OutputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/OutputPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/RadioPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/RadioPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/ui_elements/BinaryPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/ui_elements/BinaryPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -103,7 +97,7 @@
       <workItem from="1769198308007" duration="6416000" />
       <workItem from="1769268688589" duration="9843000" />
       <workItem from="1769356411394" duration="939000" />
-      <workItem from="1769956879731" duration="10732000" />
+      <workItem from="1769956879731" duration="19391000" />
     </task>
     <servers />
   </component>

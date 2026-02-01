@@ -31,7 +31,7 @@ public class BinaryPanel extends GradientPanel {
         }
     }
 
-    void setBinaryDisplay(String binaryString){
+    public void setBinaryDisplay(String binaryString){
         int requiredLength = 64;
         if (binaryString.length() > requiredLength) {
             binaryString = binaryString.substring(binaryString.length() - requiredLength);  // Przytnij jeśli dłuższy

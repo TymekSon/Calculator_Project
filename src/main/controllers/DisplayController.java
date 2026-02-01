@@ -15,6 +15,11 @@ public class DisplayController {
         ui.getOutputPanel().setMainDisplay(buffer);
     }
 
+    public void updateBinary(String s){
+        ui.getBinaryPanel().clear();
+        ui.getBinaryPanel().setBinaryDisplay(s);
+    }
+
     public void showError(String message) {
         UI ui = controller.getUI();
         ui.getOutputPanel().setMainDisplay(message);
