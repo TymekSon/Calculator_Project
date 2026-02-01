@@ -17,7 +17,11 @@ public class Calculator {
         this.wordSize = wordSize;
         accumulator = truncate(accumulator);
     }
-    
+
+    public String evaluate(){
+        return "";
+    }
+
     public void setBase(NumericBase base) {
         this.base = base;
     }

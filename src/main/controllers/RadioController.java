@@ -22,8 +22,6 @@ public class RadioController {
         };
 
         controller.setBase(newBase);
-        controller.getDisplayController().updateDisplay();
-        updateButtonStates();
     }
 
     // Zmiana rozmiaru słowa
@@ -35,46 +33,8 @@ public class RadioController {
             case "BYTE" -> WordSize.BYTE;
             default -> WordSize.QWORD;
         };
-
-        controller.setWordSize(newSize);
-        controller.getDisplayController().updateDisplay();
     }
 
     // Aktualizacja dostępności przycisków w zależności od bazy
-    private void updateButtonStates() {
-        UI ui = controller.getUI();
-        NumericBase base = controller.getBase();
 
-        // Dla każdej bazy inne cyfry są dostępne
-        switch(base) {
-            case HEX:
-                // Wszystkie przyciski dostępne (0-9, A-F)
-                ui.getButtonContainer().enableHexButtons(true);
-                ui.getButtonContainer().enableOctButtons(true);
-                ui.getButtonContainer().enableDecButtons(true);
-                ui.getButtonContainer().enableBinButtons(true);
-                break;
-            case DEC:
-                // Tylko 0-9
-                ui.getButtonContainer().enableHexButtons(false);
-                ui.getButtonContainer().enableOctButtons(true);
-                ui.getButtonContainer().enableDecButtons(true);
-                ui.getButtonContainer().enableBinButtons(true);
-                break;
-            case OCT:
-                // Tylko 0-7
-                ui.getButtonContainer().enableHexButtons(false);
-                ui.getButtonContainer().enableOctButtons(true);
-                ui.getButtonContainer().enableDecButtons(false);
-                ui.getButtonContainer().enableBinButtons(true);
-                break;
-            case BIN:
-                // Tylko 0-1
-                ui.getButtonContainer().enableHexButtons(false);
-                ui.getButtonContainer().enableOctButtons(false);
-                ui.getButtonContainer().enableDecButtons(false);
-                ui.getButtonContainer().enableBinButtons(true);
-                break;
-        }
-    }
 }

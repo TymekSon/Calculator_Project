@@ -5,22 +5,14 @@ import main.ui.UI;
 
 public class DisplayController {
     private final Controller controller;
-
+    UI ui;
     public DisplayController(Controller controller) {
         this.controller = controller;
+        ui = controller.getUI();
     }
 
-    public void updateDisplay() {
-        Calculator calc = controller.getCalculator();
-        UI ui = controller.getUI();
-
-        // Aktualizuj główny wyświetlacz
-        String displayValue = calc.getDisplayValue();
-        ui.getOutputPanel().setMainDisplay(displayValue);
-
-        // Aktualizuj wyświetlacz binarny
-        String binaryValue = calc.getBinaryRepresentation();
-        ui.getOutputPanel().setUpperDisplay(binaryValue);
+    public void updateDisplay(String buffer) {
+        ui.getOutputPanel().setMainDisplay(buffer);
     }
 
     public void showError(String message) {
@@ -28,11 +20,5 @@ public class DisplayController {
         ui.getOutputPanel().setMainDisplay(message);
         // Czyszczenie binary przy błędzie (opcjonalnie, aby uniknąć starej wartości)
         ui.getBinaryPanel().clear();
-    }
-
-    public void clearDisplay() {
-        UI ui = controller.getUI();
-        ui.getOutputPanel().setMainDisplay("0");
-        ui.getBinaryPanel().clear();  // Użyj nowej metody clear
     }
 }
