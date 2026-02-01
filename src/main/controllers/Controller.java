@@ -98,6 +98,8 @@ public class Controller {
         ));
     }
     public void addOperator(CalculatorButton cb){
+        calc.inputNumber(buffer);
+        calc.inputOperator(cb.label);
         operator = cb;
         moveBuffer();
     }
@@ -123,7 +125,22 @@ public class Controller {
 
     }
     public void evaluate(){
-        calc.evaluate();
+        calc.inputNumber(buffer);
+
+        String result = calc.evaluate();
+
+        buffer = result;
+        upperBuffer = result;
+
+        dc.updateDisplay(buffer);
+        dc.updateBinary(
+                StringNumberConverter.convert(
+                        buffer,
+                        base,
+                        NumericBase.BIN,
+                        wordSize.getBits()
+                )
+        );
     }
 
     public void backspace() {

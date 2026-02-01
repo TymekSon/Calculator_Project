@@ -32,8 +32,11 @@ public class NumberConverter {
     public static long fromOctal(String octal) {
         return Long.parseLong(octal, 8);
     }
-    
+
     public static long truncateToWordSize(long value, int bitSize) {
+        if (bitSize >= 64) {
+            return value;
+        }
         long mask = (1L << bitSize) - 1;
         return value & mask;
     }

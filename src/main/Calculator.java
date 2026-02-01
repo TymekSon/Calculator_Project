@@ -5,7 +5,7 @@ public class Calculator {
     private NumericBase base;
     private String currentInput = "";
     private long accumulator;
-    private String currentOperator = "";
+    private String currentOperator = null;
     private long memory;
     private boolean startNewNumber;
 
@@ -19,7 +19,8 @@ public class Calculator {
     }
 
     public String evaluate(){
-        return "";
+        calculate();
+        return getDisplayValue();
     }
 
     public void setBase(NumericBase base) {
@@ -157,7 +158,8 @@ public class Calculator {
                     return NumberConverter.fromOctal(currentInput);
                 case DEC:
                 default:
-                    return Long.parseLong(currentInput);
+                    long result = Long.parseLong(currentInput);
+                    return result;
             }
         } catch (NumberFormatException e) {
             return 0;
