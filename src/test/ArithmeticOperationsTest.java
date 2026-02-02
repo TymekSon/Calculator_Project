@@ -29,9 +29,9 @@ public class ArithmeticOperationsTest {
     void shouldSubtractNumbers() {
         calculator.inputNumber("20");
         calculator.inputOperator("-");
-        calculator.inputNumber("8");
+        calculator.inputNumber("28");
         calculator.calculate();
-        assertEquals(12L, calculator.getCurrentValue());
+        assertEquals(-8L, calculator.getCurrentValue());
     }
     
     @Test

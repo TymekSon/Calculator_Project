@@ -23,7 +23,6 @@ public class Controller {
         this.ui = ui;
         this.calc = new Calculator(wordSize, base);
 
-        // Przekaż referencję do siebie, żeby podkontrolery mogły się komunikować
         this.dc = new DisplayController(this);
         this.ic = new InputController(this);
         this.rc = new RadioController(this);
@@ -159,7 +158,6 @@ public class Controller {
     }
 
     private void startNewNumberAfterMemoryStoreOrModify() {
-        // next number starts fresh
         buffer = "0";
     }
 

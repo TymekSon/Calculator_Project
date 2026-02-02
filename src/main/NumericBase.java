@@ -24,8 +24,12 @@ public enum NumericBase {
     
     public String filterInput(String input) {
         StringBuilder filtered = new StringBuilder();
-        for (char c : input.toUpperCase().toCharArray()) {
-            if (isValidChar(c)) {
+        for (int i = 0; i < input.length(); i++) {
+            char c = Character.toUpperCase(input.charAt(i));
+
+            if (c == '-' && i == 0) {
+                filtered.append(c);
+            } else if (isValidChar(c)) {
                 filtered.append(c);
             }
         }
