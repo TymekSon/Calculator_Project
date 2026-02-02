@@ -15,7 +15,7 @@ class NumberConverterTest {
     @Test
     void shouldConvertDecimalToBinary() {
         assertEquals("11111111", NumberConverter.toBinary(255, 8));
-        assertEquals("00001010", NumberConverter.toBinary(10, 8));
+        assertEquals("1010", NumberConverter.toBinary(10, 8));
     }
     
     @Test

@@ -167,9 +167,6 @@ public class Calculator {
     }
     
     private long performOperation(long left, long right, String operator) {
-        System.out.println("performOperation: left=" + left + ", right=" + right + ", operator='" + operator + "'");
-        System.out.println("Operator char codes: " + operator.chars().boxed().toList());
-
         operator = operator.replace("−", "-")      // Unicode minus → ASCII minus
                 .replace("×", "*")      // Unicode multiplication → ASCII
                 .replace("÷", "/");
@@ -208,7 +205,6 @@ public class Calculator {
             case "RoR":
                 return rotateRight(left, (int) right);
             default:
-                System.out.println("performOperation: DEFAULT case hit!");
                 return right;
         }
     }

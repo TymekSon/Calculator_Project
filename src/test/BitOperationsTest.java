@@ -18,7 +18,7 @@ public class BitOperationsTest {
     @Test
     void shouldPerformBitwiseAND() {
         calculator.inputNumber("12"); // 1100
-        calculator.inputOperator("AND");
+        calculator.inputOperator("And");
         calculator.inputNumber("10"); // 1010
         calculator.calculate();
         assertEquals(8L, calculator.getCurrentValue()); // 1000 = 8
@@ -27,7 +27,7 @@ public class BitOperationsTest {
     @Test
     void shouldPerformBitwiseOR() {
         calculator.inputNumber("12"); // 1100
-        calculator.inputOperator("OR");
+        calculator.inputOperator("Or");
         calculator.inputNumber("10"); // 1010
         calculator.calculate();
         assertEquals(14L, calculator.getCurrentValue()); // 1110 = 14
@@ -36,7 +36,7 @@ public class BitOperationsTest {
     @Test
     void shouldPerformBitwiseXOR() {
         calculator.inputNumber("12"); // 1100
-        calculator.inputOperator("XOR");
+        calculator.inputOperator("Xor");
         calculator.inputNumber("10"); // 1010
         calculator.calculate();
         assertEquals(6L, calculator.getCurrentValue()); // 0110 = 6
@@ -46,7 +46,7 @@ public class BitOperationsTest {
     void shouldPerformBitwiseNOT() {
         calculator.setWordSize(WordSize.BYTE);
         calculator.inputNumber("0");
-        calculator.inputOperator("NOT");
+        calculator.inputOperator("Not");
         calculator.calculate();
         assertEquals(255L, calculator.getCurrentValue()); // wszystkie bity = 1
     }
@@ -54,7 +54,7 @@ public class BitOperationsTest {
     @Test
     void shouldPerformLeftShift() {
         calculator.inputNumber("1");
-        calculator.inputOperator("<<");
+        calculator.inputOperator("Lsh");
         calculator.inputNumber("3");
         calculator.calculate();
         assertEquals(8L, calculator.getCurrentValue()); // 1 << 3 = 8
@@ -63,7 +63,7 @@ public class BitOperationsTest {
     @Test
     void shouldPerformRightShift() {
         calculator.inputNumber("16");
-        calculator.inputOperator(">>");
+        calculator.inputOperator("Rsh");
         calculator.inputNumber("2");
         calculator.calculate();
         assertEquals(4L, calculator.getCurrentValue()); // 16 >> 2 = 4

@@ -6,7 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="14db608b-5db7-4dac-a6b8-06a8246bdde8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/NumberConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/NumberConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/MenuAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/MenuAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/NumberConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/NumberConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/WordSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/WordSize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/NumberConverterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/NumberConverterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controllers/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/controllers/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/BitOperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/BitOperationsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/NumberConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/NumberConverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +51,9 @@
     "Application.Start.executor": "Run",
     "JUnit.ArithmeticOperationsTest.executor": "Run",
     "JUnit.BitOperationsTest.executor": "Run",
+    "JUnit.test in programmer_calculator.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -49,6 +64,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -101,9 +119,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test in programmer_calculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="programmer_calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Start" />
+        <item itemvalue="JUnit.test in programmer_calculator" />
         <item itemvalue="JUnit.BitOperationsTest" />
         <item itemvalue="JUnit.ArithmeticOperationsTest" />
       </list>
@@ -113,7 +146,6 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.240" />
       </set>
     </attachedChunks>
   </component>
