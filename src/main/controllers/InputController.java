@@ -85,10 +85,7 @@ public class InputController {
                     case DIGIT, HEX:
                         controller.addToBuffer(buttonType.label);
                         break;
-                    case OPERATOR:
-                        controller.addOperator(buttonType);
-                        break;
-                    case BITWISE:
+                    case OPERATOR, BITWISE:
                         controller.addOperator(buttonType);
                         break;
                     case FUNCTION:
