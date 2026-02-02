@@ -80,19 +80,12 @@ public class InputController {
     public void attachButtonActions() {
         Map<CalculatorButton, JButton> buttonMap = ui.getButtonContainer().getButtonMap();
         buttonMap.forEach((buttonType, button) -> {
-            System.out.println("Attaching button: " + buttonType.label + ", category: " + buttonType.category);
-
             button.addActionListener(e -> {
-                System.out.println("Button clicked: " + buttonType.label + ", category: " + buttonType.category);
-
                 switch (buttonType.category) {
                     case DIGIT, HEX:
                         controller.addToBuffer(buttonType.label);
                         break;
-                    case OPERATOR:
-                        controller.addOperator(buttonType);
-                        break;
-                    case BITWISE:
+                    case OPERATOR, BITWISE:
                         controller.addOperator(buttonType);
                         break;
                     case FUNCTION:

@@ -23,7 +23,6 @@ public class DisplayController {
     public void showError(String message) {
         UI ui = controller.getUI();
         ui.getOutputPanel().setMainDisplay(message);
-        // Czyszczenie binary przy błędzie (opcjonalnie, aby uniknąć starej wartości)
         ui.getBinaryPanel().clear();
     }
 }

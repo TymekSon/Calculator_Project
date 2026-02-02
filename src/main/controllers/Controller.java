@@ -125,9 +125,47 @@ public class Controller {
                 wordSize.getBits()
         ));
     }
-    public void memoryAction(String s){
+    public void memoryAction(String action) {
+        switch (action) {
+            case "MC":
+                calc.memoryClear();
+                break;
+            case "MR":
+                buffer = calc.getMemoryString(base);
+                dc.updateDisplay(buffer);
+                dc.updateBinary(StringNumberConverter.convert(
+                        buffer,
+                        base,
+                        NumericBase.BIN,
+                        wordSize.getBits()
+                ));
+                break;
+            case "MS":
+                calc.memoryStore(buffer, base);
+                buffer = "0"; // start new number
+                break;
+            case "M+":
+                calc.memoryAdd(buffer, base);
+                buffer = "0";
+                break;
+            case "M−":
+                calc.memorySubtract(buffer, base);
+                buffer = "0";
+                break;
+        }
+    }
+
+
+
+    private void startNewNumberAfterMemoryRecall() {
 
     }
+
+    private void startNewNumberAfterMemoryStoreOrModify() {
+        // next number starts fresh
+        buffer = "0";
+    }
+
     public void evaluate(){
         calc.inputNumber(buffer);
 

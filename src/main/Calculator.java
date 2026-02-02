@@ -1,5 +1,7 @@
 package main;
 
+import java.math.BigInteger;
+
 public class Calculator {
     private WordSize wordSize;
     private NumericBase base;
@@ -141,6 +143,26 @@ public class Calculator {
         } else {
             accumulator = truncate(-accumulator);
         }
+    }
+
+    public void memoryStore(String buffer, NumericBase base) {
+        memory = truncate(parseBuffer(buffer, base));
+    }
+
+    public void memoryAdd(String buffer, NumericBase base) {
+        memory = truncate(memory + parseBuffer(buffer, base));
+    }
+
+    public void memorySubtract(String buffer, NumericBase base) {
+        memory = truncate(memory - parseBuffer(buffer, base));
+    }
+
+    public String getMemoryString(NumericBase base) {
+        return Long.toString(memory, base.getBase()).toUpperCase();
+    }
+
+    private long parseBuffer(String buffer, NumericBase base) {
+        return Long.parseLong(buffer, base.getBase());
     }
     
     private long parseCurrentInput() {
